@@ -1,0 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int m,n;
+    while(cin>>n>>m)
+        cout<<(n*m)-1<<endl;
+}
+
