@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b,p,c;
+    while(cin>>a>>b)
+    {
+        if(a==0 && b==0)
+            break;
+        p=0;
+        for(int i=a;i<=b;i++)
+        {
+            c=sqrt(i);
+            if(c*c==i)
+                p++;
+        }
+        cout<<p<<endl;
+    }
+}
