@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int t,n,a,p,r=1,s;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        a=n;
+        p=0;
+        while(r==1)
+        {
+                s=0;
+            while(n!=0)
+            {
+                s=s*10+n%10;
+                n=n/10;
+
+            }
+            if(s==a)
+                {
+                  r=1;
+                    break;
+                }
+            else
+            {
+                n=s+a;
+                a=s+a;
+                p++;
+            }
+
+        }
+        cout<<p<<" "<<s<<endl;
+    }
+}
