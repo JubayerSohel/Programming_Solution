@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b,c,d,e,f,age,t,i;
+    cin>>t;
+    for(i=1;i<=t;i++)
+    {
+        scanf("%d/%d/%d",&a,&b,&c);
+        scanf("%d/%d/%d",&d,&e,&f);
+        age=c-f;
+        if(e>b)
+            age--;
+        else if(b==e)
+        {
+            if(d>a)
+                age--;
+        }
+        if(age<0)
+            cout<<"Case "<<i<<":"<<" "<<"Invalid birth date"<<endl;
+        else if(age>130)
+            cout<<"Case "<<i<<":"<<" "<<"Check birth date"<<endl;
+        else
+            cout<<"Case "<<i<<":"<<" "<<age<<endl;
+    }
+}
