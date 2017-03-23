@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+int main()
+{
+    int t,i;
+    ll n;
+    cin>>t;
+    for(i=1;i<=t;i++)
+    {
+        cin>>n;
+        n=n*3;
+        if(n%2!=0)
+        {
+            cout<<"Case #"<<i<<": "<<n-2<<" "<<n-1<<" "<<n<<endl;
+        }
+        else
+            cout<<"Case #"<<i<<": "<<n<<" "<<n-1<<" "<<n-2<<endl;
+    }
+}
+ 
