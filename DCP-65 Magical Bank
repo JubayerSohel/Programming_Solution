@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int t,s,n;
+    cin>>t;
+    while(t--)
+    {
+        cin>>s;
+        n=ceil(((sqrt(1+(8*s)))-1)/2);
+        cout<<n<<endl;
+    }
+
+}
