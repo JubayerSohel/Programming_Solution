@@ -1,0 +1,21 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+
+
+class Main {
+
+	public static void main(String[] args) {
+		int t,i;
+		BigInteger n,m;
+		Scanner sc= new Scanner(System.in);
+		t=sc.nextInt();
+		for(i=1;i<=t;i++)
+		{
+			n=sc.nextBigInteger();
+			m= new BigInteger("100000");
+			System.out.println(n.mod(m));
+		}
+		
+	}
+
+}
