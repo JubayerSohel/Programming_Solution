@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,tm,a=-1,b=10000001;
+        string s,maxi,mini;
+        cin>>n;
+        while(n--)
+        {
+            cin>>s>>tm;
+            if(tm>a)
+            {
+                maxi=s;
+                a=tm;
+            }
+            if(tm<b)
+            {
+                mini=s;
+                b=tm;
+            }
+        }
+        cout<<maxi<<" "<<mini<<endl;
+    }
+}
