@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int t,n,i,q,g,res,j;
+    double v,sum;
+    cin>>t;
+    for(i=1;i<=t;i++)
+    {
+        sum=0;
+        cin>>n;
+        for(j=1;j<=n;j++)
+        {
+            cin>>v>>q;
+            sum+=v*q;
+        }
+        cin>>g;
+        res=g-sum;
+        cout<<"Case "<<i<<": "<<res<<endl;
+    }
+}
