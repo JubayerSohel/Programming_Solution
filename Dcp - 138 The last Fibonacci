@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+long long a[60];
+void fibo()
+{
+    int i;
+    a[0]=0;
+    a[1]=1;
+    for(i=2;i<=59;i++)
+    {
+        a[i]=a[i-1]+a[i-2];
+    }
+}
+int main()
+{
+    fibo();
+    int t,k,n;
+    cin>>t;
+    for(k=1;k<=t;k++)
+    {
+        cin>>n;
+        if(n>60)n%=60;
+        cout<<"Case "<<k<<": "<<a[n]%10<<" is the last digit."<<endl;
+    }
+}
