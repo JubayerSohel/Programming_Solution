@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,n,r;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        r=(((((n*567)/9)+7492)*235)/47)-496;
+        if(r<0)
+            r*=-1;
+        cout<<r/10%10<<endl;
+    }
+}
