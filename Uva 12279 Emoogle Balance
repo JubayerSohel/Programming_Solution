@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int i=1,n,j,p;
+    while(cin>>n)
+    {
+        if(n==0)
+            break;
+        else{
+        int arr[n];
+        p=0;
+        for(j=1;j<=n;j++)
+        {
+            cin>>arr[j];
+            if(arr[j]==0)
+                p++;
+        }
+        cout<<"Case "<<i<<": "<<(n-p)-p<<endl;
+        i++;
+        }
+    }
+}
