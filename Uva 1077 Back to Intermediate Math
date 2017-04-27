@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	double t1,t2,d,u,v,ans=0;
+	int i,t;
+	cin>>t;
+	for(i=1;i<=t;i++)
+	{
+		cin>>d>>v>>u;
+		if(v==0 || u==0 || v>=u)
+		{
+			printf("Case %d: can't determine\n",i);
+			continue;
+		}
+		t1=(1.0*d)/(u*1.0);
+		t2=(1.0*d)/(sqrt((u*u)-(v*v))*1.0);
+		ans=abs(t2-t1);
+		printf("Case %d: %.3lf\n",i,ans);
+	}
+	return 0;
+}
