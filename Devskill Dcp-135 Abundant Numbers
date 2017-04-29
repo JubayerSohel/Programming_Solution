@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+int getSum(int n)
+{
+    int sum = 0;
+    for (int i=1; i<=sqrt(n); i++)
+    {
+        if (n%i==0)
+        {
+            if (n/i == i)
+                sum = sum + i;
+            else
+            {
+                sum = sum + i;
+                sum = sum + (n / i);
+            }
+        }
+    }
+    sum = sum - n;
+    if(sum>n)
+    return sum-n;
+    else return 0;
+}
+int main()
+{
+    int t,ne,i,j,e,res,ab;
+    cin>>t;
+    while(t--)
+    {
+        res=0;
+        j=0;
+        cin>>ne;
+        for(i=1;i<=ne;i++)
+        {
+            cin>>e;
+            ab=getSum(e);
+            //cout<<ab<<endl;
+            if(ab>res){
+                res=ab;
+            j=e;
+            }
+        }
+        if(j==0 && res==0)
+            cout<<"-1"<<endl;
+        else
+            cout<<j<<" "<<res<<endl;
+    }
+}
