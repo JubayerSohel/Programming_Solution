@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,i;
+    unsigned long long int l,q,an,k,res;
+    string s;
+    cin>>t;
+    for(i=1;i<=t;i++)
+    {
+        res=1;
+        cin>>l>>s;
+        q=s.size();
+        an=l-q;
+        if(an==0)
+            cout<<"1"<<endl;
+        else
+            {
+                for(k=1;k<=an;k++)
+                {
+                    res=res*26;
+                }
+                cout<<res<<endl;
+            }
+    }
+}
