@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,a,b,c,i,n;
+    cin>>t;
+    while(t--)
+    {
+        i=0;
+        cin>>a>>b>>c;
+        n=a+b;
+        while(n>=c)
+        {
+            n=n-c+1;
+            i++;
+        }
+        cout<<i<<endl;
+    }
+}
