@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,i,j,n,arr[1000],p,k;
+    while(cin>>n)
+    {
+        j=0;
+        k=0;
+        if(n==0)
+            break;
+        else
+        {
+        cout<<"The parity of ";
+        while(n>0)
+        {
+           arr[j]=n%2;
+           n=n/2;
+           j++;
+        }
+        for(p=j-1;p>=0;p--)
+        {
+            if(arr[p]==1)
+                k++;
+            cout<<arr[p];
+        }
+        cout<<" is "<<k<<" (mod 2)."<<endl;
+        }
+    }
+}
