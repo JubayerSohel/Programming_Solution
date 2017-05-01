@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int i=0,n;
+    double a,b,c,d,e;
+    while(cin>>n)
+        if(n==0)
+            break;
+        else
+        {
+            cin>>a>>b>>c;
+            if(n==1)
+            {
+                e=(b-a)/c;
+                d=(a*c)+0.5*(e*c*c);
+            }
+            else if(n==2)
+            {
+               e=(b-a)/c;
+               d=(a*e)+0.5*(c*e*e);
+
+            }
+            else if(n==3)
+            {
+                d=sqrt((a*a)+2.0*b*c);
+                e=(d-a)/b;
+            }
+            else if(n==4)
+            {
+               d=sqrt((a*a)-2.0*b*c);
+               e=(a-d)/b;
+            }
+            printf("Case %d: %.3lf %.3lf\n",++i,d,e);
+        }
+}
