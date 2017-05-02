@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,i,j,k;
+    string s1,s2;
+    cin>>t;
+    cin.ignore(256,'\n');
+    for(i=1; i<=t; i++)
+    {
+        getline(cin,s1);
+        getline(cin,s2);
+        if(s1==s2)
+            cout<<"Case "<<i<<": Yes"<<endl;
+        else
+        {
+            string s3;
+            for(j=0;j<s1.size();j++)
+            {
+                if(s1[j]!=' ')
+                    s3=s3+s1[j];
+            }
+            if(s3==s2)
+                cout<<"Case "<<i<<": Output Format Error"<<endl;
+            else
+                cout<<"Case "<<i<<": Wrong Answer"<<endl;
+        }
+    }
+}
