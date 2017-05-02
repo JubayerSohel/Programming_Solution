@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,i,l,res,j;
+    string s;
+    cin>>t;
+    cin.ignore(256,'\n');
+    for(i=1;i<=t;i++)
+    {
+        res=0;
+        getline(cin,s);
+        l=s.size();
+        for(j=0;j<l;j++)
+        {
+            if(s[j]==' ' || s[j]=='a' || s[j]=='d' || s[j]=='g' || s[j]=='j' || s[j]=='m' || s[j]=='p' || s[j]=='t' || s[j]=='w')
+                res=res+1;
+            if(s[j]=='b' || s[j]=='e' || s[j]=='h' || s[j]=='k' || s[j]=='n' || s[j]=='q' || s[j]=='u' || s[j]=='x')
+                res=res+2;
+            if(s[j]=='c' || s[j]=='f' || s[j]=='i' || s[j]=='l' || s[j]=='o' || s[j]=='r' || s[j]=='v' || s[j]=='y')
+                res=res+3;
+            if(s[j]=='s' || s[j]=='z')
+                res=res+4;
+        }
+        cout<<"Case #"<<i<<": "<<res<<endl;
+    }
+}
