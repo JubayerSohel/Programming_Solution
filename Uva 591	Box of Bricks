@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    int i,av,res,sum,t=1;
+    while(cin>>n && n!=0)
+    {
+        int arr[n];
+        sum=0;
+        res=0;
+        for(i=0;i<n;i++)
+        {
+            cin>>arr[i];
+            sum+=arr[i];
+        }
+        av=sum/n;
+        for(i=0;i<n;i++)
+        {
+            if(arr[i]>av)
+                res=res+(arr[i]-av);
+        }
+        cout<<"Set #"<<t<<endl;
+        cout<<"The minimum number of moves is "<<res<<"."<<endl;
+        cout<<endl;
+        t++;
+
+
+    }
+}
