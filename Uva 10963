@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,n,s,num,i;
+    cin>>t;
+    while(t--)
+    {
+        cin>>num;
+        set<int> vec;
+        for(i=0;i<num;i++)
+        {
+            cin>>n>>s;
+            vec.insert(abs(n-s));
+        }
+        if(vec.size()==1)
+            cout<<"yes"<<endl;
+        else
+            cout<<"no"<<endl;
+        if(t)
+            cout<<endl;
+    }
+}
