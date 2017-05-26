@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    double money,s_money,avg,res;
+    long long int t,i,j,st;
+    cin>>t;
+    for(i=1;i<=t;i++)
+    {
+        s_money=0.0;
+        for(j=1;j<=12;j++)
+        {
+            cin>>money;
+            s_money+=money;
+
+        }
+        avg=s_money/12.0;
+        if(avg>999.99)
+        {
+            res=fmod(avg,1000.0);
+            st=(long long int)avg/1000.0;
+            printf("%lld $%lld,%.2lf\n",i,st,res);
+        }
+        else
+            printf("%lld $%.2lf\n",i,avg);
+    }
+    return 0;
+}
