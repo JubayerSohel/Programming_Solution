@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int i,l,res,m,a,r,g,p,t,tc,mini;
+    string s;
+    cin>>tc;
+    while(tc--)
+    {
+        cin>>s;
+        m=0,a=0,r=0,g=0,p=0,t=0,mini=601;
+        l=s.size();
+        for(i=0;i<l;i++)
+        {
+            if(s[i]=='M')
+                m++;
+            if(s[i]=='A')
+                a++;
+            if(s[i]=='R')
+                r++;
+            if(s[i]=='G')
+                g++;
+            if(s[i]=='I')
+                p++;
+            if(s[i]=='T')
+                t++;
+        }
+        a/=3;
+        r/=2;
+        if(mini>=m)mini=m;
+        if(mini>=a)mini=a;
+        if(mini>=r)mini=r;
+        if(mini>=g)mini=g;
+        if(mini>=p)mini=p;
+        if(mini>=t)mini=t;
+        cout<<mini<<endl;
+    }
+}
