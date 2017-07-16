@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int n,s;
+    while(cin>>n && n>=0)
+    {
+        s=0;
+        s=(n*(n+1))/2;
+        cout<<s+1<<endl;;
+       // if(n>=0)
+         //   putchar('\n');
+    }
+}
+
